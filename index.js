@@ -7,13 +7,13 @@ const port = 5000;
 app.use(express.json());
 
 //this configuration will work only when your server is also running on docker
-// const pool = new Pool({
-//   host: process.env.DB_HOST || 'localhost',
-//   user: process.env.DB_USER || 'myuser',
-//   password: process.env.DB_PASSWORD || 'mypassword',
-//   database: process.env.DB_NAME || 'mydb',
-//   port: 5432
-// });
+const pool = new Pool({
+  host: process.env.DB_HOST || 'localhost',
+  user: process.env.DB_USER || 'myuser',
+  password: process.env.DB_PASSWORD || 'mypassword',
+  database: process.env.DB_NAME || 'mydb',
+  port: 5432
+});
 
 //this configuration would work when your server is running on local and your postgres running on docker having mapping for localhost on 5432
 // const pool = new Pool({

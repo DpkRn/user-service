@@ -39,7 +39,7 @@ app.get('/users', async (req, res) => {
 
 app.post('/users', async (req, res) => {
   const { username, email,password_hash } = req.body;
-  const result = await pool.query('INSERT INTO users(username, email, password_hash) VALUES($1, $2, $3) RETURNING *', [name, email,password_hash]);
+  const result = await pool.query('INSERT INTO users(username, email, password_hash) VALUES($1, $2, $3) RETURNING *', [username, email,password_hash]);
   res.json(result.rows[0]);
 });
 

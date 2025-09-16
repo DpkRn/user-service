@@ -22,6 +22,7 @@ jobs:
         key: ${{ secrets.EC2_KEY }}
         script: |
           sudo -i
+          cd /home/ | ls -ll
           whoami
           pwd
           cd /root/web-app/user-service

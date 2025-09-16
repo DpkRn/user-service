@@ -3,7 +3,7 @@ name: Deploy to EC2 (no SSL)
 on:
   push:
     branches:
-      - release    # deploy when main branch changes
+      - release    
 
 jobs:
   deploy:

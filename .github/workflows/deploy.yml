@@ -21,7 +21,7 @@ jobs:
         username: ${{ secrets.EC2_USER }}
         key: ${{ secrets.EC2_KEY }}
         script: |
-          sudo -i && whoami &&  ls -ll
+          sudo -i && whoami &&  cd web-app/user-service && pwd && git pull origin release  && ./build.sh && ./run.sh
           # # cd /home/ | ls -ll
           # whoami
           # pwd

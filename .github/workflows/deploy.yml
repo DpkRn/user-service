@@ -24,7 +24,8 @@ jobs:
           sudo su -
           whoami
           pwd
-          cd ~/web-app/user-service
+          cd /root/web-app/user-service
+          pwd
           git pull origin release       
           ./build.sh         
           ./run.sh

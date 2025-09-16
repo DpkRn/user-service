@@ -22,11 +22,11 @@ jobs:
         key: ${{ secrets.EC2_KEY }}
         script: |
           sudo -i
-          cd /home/ | ls -ll
+          # cd /home/ | ls -ll
           whoami
           pwd
-          cd /root/web-app/user-service
-          pwd
-          git pull origin release       
+          sudo cd /root/web-app/user-service
+          sudo pwd
+          sudo git pull origin release       
           ./build.sh         
           ./run.sh
